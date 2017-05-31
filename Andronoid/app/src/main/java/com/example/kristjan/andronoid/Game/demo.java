@@ -20,9 +20,7 @@ import com.example.kristjan.andronoid.R;
 
 public class demo extends Activity {
 
-    // gameView will be the view of the game
-    // It will also hold the logic of the game
-    // and respond to screen touches as well
+
     public static final String MyPREFERENCES = "MyPrefs";
     SharedPreferences sharedPreferences;
     int screenX;
@@ -40,28 +38,19 @@ public class demo extends Activity {
         setContentView(gameView);
 
     }
-    // Here is our implementation of BreakoutView
-    // It is an inner class.
-    // Note how the final closing curly brace }
-    // is inside the BreakoutGame class
 
-    // Notice we implement runnable so we have
-    // A thread and can override the run method.
     class gameView extends SurfaceView implements Runnable {
 
-        // This is our thread
+
         Thread gameThread = null;
 
-        // This is new. We need a SurfaceHolder
-        // When we use Paint and Canvas in a thread
-        // We will see it in action in the draw method soon.
+
         SurfaceHolder ourHolder;
 
-        // A boolean which we will set and unset
-        // when the game is running- or not.
+
         volatile boolean playing;
 
-        // Game is paused at the start
+
         boolean paused = true;
 
         // A Canvas and a Paint object
@@ -99,12 +88,9 @@ public class demo extends Activity {
         // Lives
         int lives = 3;
 
-        // When the we initialize (call new()) on gameView
-        // This special constructor method runs
+
         public gameView(Context context) {
-            // The next line of code asks the
-            // SurfaceView class to set up our object.
-            // How kind.
+
             super(context);
 
             // Initialize ourHolder and paint objects
@@ -128,7 +114,7 @@ public class demo extends Activity {
             // Load powerup
             powerup = new powerup(screenX,screenY);
 
-            // This SoundPool is deprecated but don't worry
+
 
 
 
@@ -171,9 +157,7 @@ public class demo extends Activity {
                 }
                 // Draw the frame
                 draw();
-                // Calculate the fps this frame
-                // We can then use the result to
-                // time animations and more.
+
                 timeThisFrame = System.currentTimeMillis() - startFrameTime;
                 if (timeThisFrame >= 1) {
                     fps = 1000 / timeThisFrame;
@@ -183,8 +167,7 @@ public class demo extends Activity {
 
         }
 
-        // Everything that needs to be updated goes in here
-        // Movement, collision detection etc.
+
         public void update() {
 
             // Move the paddle if required
@@ -272,13 +255,13 @@ public class demo extends Activity {
 
             // Make sure our drawing surface is valid or we crash
             if (ourHolder.getSurface().isValid()) {
-                // Lock the canvas ready to draw
+
                 canvas = ourHolder.lockCanvas();
 
                 // Draw the background color
                 canvas.drawColor(Color.argb(255, 26, 128, 182));
 
-                // Choose the brush color for drawing
+
                 paint.setColor(Color.argb(255, 255, 255, 255));
 
                 // Draw the paddle
@@ -293,7 +276,7 @@ public class demo extends Activity {
                 trans = numBricks / 3;
                 trans2 = numBricks - trans;
                 paint.setColor(Color.argb(255, 249, 129, 0));
-                // Draw the bricks if visible
+
                 //orange
                 for (int i = 0; i < trans + 1 ; i++) {
                     if (bricks[i].getVisibility()) {
@@ -409,9 +392,7 @@ public class demo extends Activity {
 
 
     }
-    // This is the end of our BreakoutView inner class
 
-    // This method executes when the player starts the game
     @Override
     protected void onResume() {
         super.onResume();
