@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Andronoid</string>
+    <string name="button">Button</string>
+    <string name="play">play</string>
+    <string name="cup">cup</string>
+    <string name="name"></string>
+    <string name="sinu_nimi">Sinu nimi</string>
+    <string name="textview">TextView</string>
+    <string name="nullfield">#NULL</string>
+</resources>
