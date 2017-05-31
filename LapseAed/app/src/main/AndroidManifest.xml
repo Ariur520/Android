@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tarkvaratehnika.ttu.lapseaed">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/LapseaedTheme">
+        <activity android:name=".FirstPage"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".EnterNameActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".GameMenuActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".calculationGame.CalculationGameActivityEasy"
+            android:screenOrientation="portrait" />
+        <activity android:name=".calculationGame.CalculationGameActivityMedium"
+            android:screenOrientation="portrait" />
+        <activity android:name=".calculationGame.CalculationGameActivityHard"
+            android:screenOrientation="portrait" />
+        <activity android:name=".picGame.PicGameActivityEasy"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".picGame.PicGameActivityMedium"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".picGame.PicGameActivityHard"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".selectionGame.SelectionGameActivityEasy"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".selectionGame.SelectionGameActivityMedium"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".selectionGame.SelectionGameActivityHard"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".highScores.CalculationGameHighScoreActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".highScores.PicGameHighScoreActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".highScores.SelectionGameHighScoreActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

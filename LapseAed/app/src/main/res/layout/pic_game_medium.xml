@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_game1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tarkvaratehnika.ttu.lapseaed.picGame.PicGameActivityHard"
+    android:background="@drawable/back6">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/giraffe"
+        android:adjustViewBounds="false"
+        app:srcCompat="@drawable/girafferight"
+        tools:layout_editor_absoluteY="44dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:layout_width="202dp"
+        android:layout_height="50dp"
+        android:id="@+id/exit"
+        android:clickable="true"
+        android:onClick="onClickExit"
+        android:background="@drawable/lopeta"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:layout_width="192dp"
+        android:layout_height="193dp"
+        app:srcCompat="@drawable/bubble1"
+        android:id="@+id/bubble"
+        android:rotation="-30"
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+        app:layout_constraintRight_toLeftOf="@+id/giraffe"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/score"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintTop_toTopOf="@+id/giraffe"
+        android:layout_marginTop="16dp" />
+
+    <ImageView
+        android:layout_width="422dp"
+        android:layout_height="395dp"
+        android:src="@drawable/dog"
+        android:id="@+id/imageToGuess"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:id="@+id/option3"
+        android:height="70dp"
+        android:textSize="25dp"
+        android:shadowColor="@android:color/background_dark"
+        android:shadowDx="9"
+        android:shadowDy="9"
+        android:shadowRadius="20"
+        android:onClick="onCheckAnswer"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline6" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:id="@+id/option1"
+        android:elevation="0dp"
+        android:height="70dp"
+        android:textSize="25dp"
+        android:shadowColor="@android:color/background_dark"
+        android:shadowDx="9"
+        android:shadowDy="9"
+        android:shadowRadius="20"
+        android:onClick="onCheckAnswer"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kes see\non?  "
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textSize="24sp"
+        android:id="@+id/text"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        app:layout_constraintBottom_toBottomOf="@+id/bubble"
+        app:layout_constraintTop_toTopOf="@+id/bubble"
+        app:layout_constraintRight_toLeftOf="@+id/giraffe"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/bubble"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintVertical_bias="0.44" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:id="@+id/option4"
+        android:elevation="0dp"
+        android:height="70dp"
+        android:textSize="25dp"
+        android:shadowColor="@android:color/background_dark"
+        android:shadowDx="9"
+        android:shadowDy="9"
+        android:shadowRadius="20"
+        android:onClick="onCheckAnswer"
+        app:layout_constraintRight_toLeftOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/imageToGuess" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:id="@+id/option2"
+        android:height="70dp"
+        android:textSize="25dp"
+        android:shadowColor="@android:color/background_dark"
+        android:shadowDx="9"
+        android:shadowDy="9"
+        android:shadowRadius="20"
+        android:onClick="onCheckAnswer"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintRight_toLeftOf="@+id/guideline6" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="600dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="673dp"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintGuide_percent="0.7587373" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="600dp"
+        android:layout_height="0dp"
+        android:id="@+id/guideline3"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="821dp"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintGuide_percent="0.9255919" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="887dp"
+        android:id="@+id/guideline5"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="154dp"
+        app:layout_constraintGuide_percent="0.25666666" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="887dp"
+        android:id="@+id/guideline6"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="453dp"
+        app:layout_constraintGuide_percent="0.755" />
+</android.support.constraint.ConstraintLayout>

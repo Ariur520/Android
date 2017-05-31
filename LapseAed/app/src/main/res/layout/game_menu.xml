@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/gameMenu"
+    android:background="@drawable/back3sm">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/giraffeleft"
+        android:id="@+id/giraffe"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitStart"
+        android:paddingTop="30dp"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <ImageView
+        android:layout_width="335dp"
+        android:layout_height="192dp"
+        app:srcCompat="@drawable/bubble1"
+        android:id="@+id/bubble"
+        android:rotation="180"
+        app:layout_constraintTop_toTopOf="@+id/giraffe"
+        android:layout_marginTop="155dp"
+        app:layout_constraintLeft_toLeftOf="@+id/giraffe"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/giraffe" />
+
+    <TextView
+        android:text="Vali mäng,\n"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="26dip"
+        app:layout_constraintRight_toRightOf="@+id/bubble"
+        app:layout_constraintLeft_toLeftOf="@+id/bubble"
+        app:layout_constraintBottom_toBottomOf="@+id/bubble"
+        app:layout_constraintTop_toTopOf="@+id/bubble"
+        android:id="@+id/chooseGame"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/centreGuidline"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50986344"
+        tools:layout_editor_absoluteY="289dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/picgame"
+        android:id="@+id/picGameButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="onClickPicGame"
+        android:clickable="true"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintRight_toLeftOf="@+id/verticalGuideline"
+        app:layout_constraintTop_toTopOf="@+id/bottomVerticalGuideline"
+        app:layout_constraintVertical_bias="0.060000002" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/calcgame"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:clickable="true"
+        android:id="@+id/calcGameButton"
+        android:onClick="onClickCalcGame"
+        app:layout_constraintTop_toTopOf="@+id/bottomVerticalGuideline"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/verticalGuideline" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/verticalGuideline"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5060827"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="194dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/bottomVerticalGuideline"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7298938"
+        tools:layout_editor_absoluteY="414dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/selectiongame"
+        android:id="@+id/selectionGameButton"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/bubble"
+        app:layout_constraintBottom_toTopOf="@+id/bottomVerticalGuideline"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        android:clickable="true"
+        android:onClick="onClickSelectionGame" />
+
+</android.support.constraint.ConstraintLayout>

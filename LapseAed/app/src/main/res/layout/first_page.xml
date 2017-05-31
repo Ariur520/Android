@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tarkvaratehnika.ttu.lapseaed.FirstPage">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/firstView"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/back"
+        android:adjustViewBounds="false" />
+
+    <ImageView
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/giraffe111"
+        android:id="@+id/giraffe"
+        android:paddingLeft="20dp"
+        android:layout_width="wrap_content"
+        android:adjustViewBounds="true"
+        android:elevation="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/playButton"
+        android:layout_alignEnd="@+id/playButton"
+        android:layout_marginRight="91dp"
+        android:layout_marginEnd="91dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/play1"
+        android:id="@+id/playButton"
+        android:clickable="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="105dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/name"
+        android:id="@+id/imageView6"
+        android:layout_marginBottom="86dp"
+        android:layout_above="@+id/playButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
